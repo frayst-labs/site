@@ -1,0 +1,4 @@
+Contact: mailto:security@frayst.com
+Expires: 2027-11-18T00:00:00.000Z
+Preferred-Languages: en
+Policy: https://frayst.com/how-we-prove-it/#disclosure

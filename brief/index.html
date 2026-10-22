@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Frayst: brief</title>
+<meta name="description" content="Frayst finds where AI training environments reward wrong answers, proves each case by running it, and fixes it.">
+<meta property="og:title" content="Frayst: brief"><meta property="og:description" content="Frayst finds where AI training environments reward wrong answers, proves each case by running it, and fixes it.">
+<meta property="og:image" content="/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@fraystlabs">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/site.css">
+<script src="/static/site.js"></script>
+</head><body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="site"><div class="wrap bar">
+  <a class="brand" href="/" aria-label="Frayst, home"><svg viewBox="16 14 94 92" aria-hidden="true"><rect x="16" y="14" width="44" height="92"/><rect x="59.5" y="14" width="50.5" height="8"/><rect x="59.5" y="28" width="45.5" height="8"/><rect x="59.5" y="42" width="10.5" height="8"/><rect x="59.5" y="56" width="22.5" height="8"/><rect x="59.5" y="70" width="28.5" height="8"/><rect x="59.5" y="84" width="6.5" height="8"/><rect x="59.5" y="98" width="3.5" height="8"/><rect x="90" y="56" width="12" height="8"/></svg><span>FRAYST</span></a>
+  
+  <a class="cta" href="mailto:pilots@frayst.com">pilots@frayst.com</a>
+</div></header>
+<main id="content">
+
+<section><div class="wrap grid12">
+  <div class="main">
+    <p class="kicker">Frayst · brief · October 2026</p>
+    <h1>Training environments reward wrong answers. We prove where, and fix it.</h1>
+    <p class="lede">When a training environment's grader accepts a wrong answer, the model learns the wrong answer. Frayst finds those graders, proves each case by running it, and delivers a fix that's been checked.</p>
+  </div>
+  <div class="full results"><div><p class="big">16.1%</p><p>of public coding training tasks (SWE-rebench) accept a deliberately wrong fix: <b>56 of 348</b>. The rate held in an independent replication.</p><p class="src">Pre-registered · 95% interval 12.4–20.4%</p></div><div><p class="big">31%</p><p>of the time, an AI model asked directly pointed at the real weak spot. It flagged 75% of tasks, most with nothing to back them. <b>Every Frayst finding is proven and comes with a fix.</b></p><p class="src">Same 100 tasks, same model · Protocol B</p></div><div><p class="big">70 of 70</p><p>coding findings came with a fix we verified: the wrong fix now fails and the correct one still passes.</p><p class="src">95% interval 94.9–100.0%</p></div></div>
+</div></section>
+
+<section><div class="wrap grid12">
+  <div class="main"><h2>How each finding is proven</h2></div>
+  <div class="full steps">
+    <div><h3>A wrong answer passes</h3><p>The environment's own grader gives full marks to an answer that breaks a requirement quoted word for word from the task.</p></div>
+    <div><h3>It passes every time</h3><p>In fresh, sealed runs, the wrong answer passes 3 of 3 times and the correct answer still passes 5 of 5.</p></div>
+    <div><h3>The fix holds</h3><p>We change the grader so the wrong answer fails and the correct one still passes, then run both again.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap grid12">
+  <div class="main">
+    <h2>A pilot</h2>
+    <ol class="plain">
+      <li>You pick 20–50 of your tasks: coding, terminal or business-workflow.</li>
+      <li>The scan runs on your machines. Your tasks never leave them.</li>
+      <li>Within a week you get a report: every proven hole, the wrong answer that gets through, and a verified fix.</li>
+    </ol>
+    <p>The first pilots are free. We'd rather earn the second conversation with evidence.</p>
+    <p class="contact"><a href="mailto:pilots@frayst.com">pilots@frayst.com</a></p>
+    <p class="note">Prem Kanaparthi, founder · <a href="https://x.com/fraystlabs">@fraystlabs</a></p>
+  </div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap bar">
+  <span>© 2026 Frayst</span>
+  <nav aria-label="Footer"><a href="mailto:hello@frayst.com">hello@frayst.com</a><a href="https://x.com/fraystlabs">X</a><a href="https://huggingface.co/frayst">Hugging Face</a><button class="theme" type="button">Dark</button></nav>
+</div></footer>
+</body></html>
