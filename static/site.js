@@ -10,16 +10,17 @@
   if (saved) root.dataset.theme = saved;
 
   document.addEventListener("DOMContentLoaded", function () {
-    var btn = document.querySelector("button.theme");
-    function label() { if (btn) btn.textContent = current() === "dark" ? "Light" : "Dark"; }
-    if (btn) {
-      label();
-      btn.addEventListener("click", function () { var next = current() === "dark" ? "light" : "dark"; root.dataset.theme = next; store(next); label(); });
+    var btns = document.querySelectorAll("button.theme");
+    function label() {
+      var dark = current() === "dark";
+      btns.forEach(function (b) { b.setAttribute("aria-checked", dark ? "true" : "false"); if (!b.classList.contains("switch")) b.textContent = dark ? "Light" : "Dark"; });
     }
+    label();
+    btns.forEach(function (b) { b.addEventListener("click", function () { var next = current() === "dark" ? "light" : "dark"; root.dataset.theme = next; store(next); label(); }); });
 
     var grid = document.querySelector(".tasks"), out = document.querySelector(".readout");
     if (grid && out) {
-      var words = { h: "a wrong answer got full marks", k: "the grader held", b: "the task was broken" };
+      var words = { h: "a wrong answer got full marks", k: "the grader held", b: "not counted yet, being re-checked" };
       function show(e) {
         var t = e.target; if (t.tagName !== "I") return;
         var n = +t.dataset.n, s = "Task " + t.dataset.i + " of " + grid.children.length + " · difficulty tier " + t.dataset.t + " · " + words[t.dataset.o];
